@@ -29,11 +29,10 @@ jobs:
 
 
   test-java-2:
-  - name: Checkout repository
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
+      - name: Checkout repository 2
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
@@ -52,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
+      - name: Checkout repository 3
         uses: actions/checkout@v4
 
       - name: Set up JDK 23
