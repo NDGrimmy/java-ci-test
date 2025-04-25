@@ -1,0 +1,62 @@
+name: Java Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-java-1:
+    runs-on: ubuntu-latest
+    
+    steps:
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 11
+          cache: maven
+
+      - name: Build with maven
+        run: |
+          mvn clean install
+          mvn test
+
+  test-java-2:
+    runs-on: ubuntu-latest
+    
+    steps:
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+          cache: maven
+
+      - name: Build with maven
+        run: |
+          mvn clean install
+          mvn test
+
+  test-java-3:
+    runs-on: ubuntu-latest
+    
+    steps:
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 23
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 23
+          cache: maven
+
+      - name: Build with maven
+        run: |
+          mvn clean install
+          mvn test
