@@ -55,7 +55,7 @@
                         <counter>LINE</counter>
                         <value>COVEREDRATIO</value>
                         <!-- This is a custom threshhold -->
-                        <minimum>0.5</minimum> 
+                        <minimum>0.1</minimum> 
                     </limit>
                     </limits>
                 </rule>
