@@ -26,6 +26,9 @@ jobs:
         run: |
           mvn clean install
           mvn test
+      
+      - name: Verify code coverage
+        run: mvn clean verify
 
 
   test-java-2:
@@ -47,6 +50,9 @@ jobs:
           mvn clean install
           mvn test
 
+      - name: Verify code coverage
+        run: mvn clean verify
+
   test-java-3:
     runs-on: ubuntu-latest
     
@@ -65,3 +71,6 @@ jobs:
         run: |
           mvn clean install
           mvn test
+
+      - name: Verify code coverage
+        run: mvn clean verify
